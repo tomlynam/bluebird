@@ -1,0 +1,9 @@
+<input id='tweet' placeholder='Say something' />
+<button id='tweet_button'>Tweet</button>
+
+<h3>Tweets by <%= ENV['TW_HANDLE'] %> </h3>
+<ul id='tweets'>
+	<% @tweets.each do |tweet| %>
+		<li><%= tweet.text %></li>
+	<% end %>
+</ul>
